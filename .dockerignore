@@ -1,0 +1,24 @@
+# Ignore virtual environment
+venv/
+.venv/
+env/
+
+# Ignore local git files
+.git/
+.gitignore
+
+# Ignore build artifacts and caches
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Ignore local CatBoost logs
+catboost_info/
+
+# Ignore Docker files themselves
+Dockerfile
+.dockerignore
+deploy_ec2.sh

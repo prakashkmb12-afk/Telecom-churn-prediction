@@ -1,0 +1,27 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+# CatBoost logs
+catboost_info/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Data
+# We can ignore the large raw data files, but keep sample input
+data/
+*.csv
+!sample_churn_input.csv
+
+# OS metadata
+.DS_Store
+Thumbs.db
