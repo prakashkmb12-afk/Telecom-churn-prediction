@@ -10,11 +10,9 @@ ENV PYTHONUNBUFFERED=1 \
 # Set the working directory in the container
 WORKDIR /app
 
-# Install system dependencies
+# Install system dependencies (curl is needed for Docker healthcheck)
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    build-essential \
     curl \
-    software-properties-common \
     && rm -rf /var/lib/apt/lists/*
 
 # Copy the requirements file and install dependencies
