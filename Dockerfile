@@ -21,12 +21,14 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the application source code, models, and data
+# Copy the application source code and models
 COPY app/ ./app/
 COPY src/ ./src/
 COPY models/ ./models/
-COPY data/ ./data/
 COPY sample_churn_input.csv .
+
+# Download the raw dataset for the EDA tab to function
+RUN python src/download_data.py
 
 # Expose Streamlit default port
 EXPOSE 8501
